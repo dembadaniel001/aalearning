@@ -14,6 +14,7 @@ session_start();
     <header>
      <a href="index.php" class="header-logo">aaLearning</a>
      <nav>
+       
        <ul>
         <a href="index.php"><li>Home</li></a>
         <a href="sign_in.php"><li>Register</li></a>
