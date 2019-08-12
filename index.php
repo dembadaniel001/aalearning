@@ -14,12 +14,19 @@ session_start();
     <header>
      <a href="index.php" class="header-logo">aaLearning</a>
      <nav>
-       
-       <ul>
-        <a href="index.php"><li>Home</li></a>
-        <a href="sign_in.php"><li>Register</li></a>
-        <a href="login.php"><li>Log in</li></a>
-       </ul>
+      <?php
+      if (isset($_SESSION['u_id'])) {
+        echo '<form action="logout.php" method="post">
+          <button type="submit" name="submit">Log out</button>
+        </form>';
+      }else {
+        echo '<ul>
+         <a href="index.php"><li>Home</li></a>
+         <a href="sign_in.php"><li>Register</li></a>
+         <a href="login.php"><li>Log in</li></a>
+        </ul>';
+      }
+       ?>
      </nav>
     </header>
     <main>
@@ -50,12 +57,23 @@ session_start();
     </div>
     </main>
     <footer>
-      <ul>
-        <a href="#"><li></li>Home</a>
-        <a href="student.php"><li></li>View notes</a>
-        <a href="#"><li></li>Register</a>
-        <a href="#"><li></li>Log in</a>
-      </ul>
+      <?php
+      if (isset($_SESSION['u_id'])) {
+        echo '
+        <ul>
+            <a href="index.php"><li></li>Home</a>
+            <a href="student.php"><li></li>View notes</a>
+        </ul>';
+      }else {
+        echo '
+        <ul>
+          <a href="index.php"><li></li>Home</a>
+          <a href="sign_in.php"><li></li>Register</a>
+          <a href="login.php"><li></li>Log in</a>
+        </ul>
+        ';
+      }
+       ?>
       <div class="contactSM">
         <a href="https://web.facebook.com/Demba-Jr-Techdev-619066981920240/">
           <img src="img/img08.png" alt="facebook icon">

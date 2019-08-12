@@ -126,6 +126,7 @@ font-size: 50px;
 color: #242424 ;
 padding: 0 16px;
 }
+}
 @media only screen and (min-width: 1000px) {
   header .header-logo{
     text-transform: uppercase;
@@ -150,6 +151,13 @@ padding: 0 16px;
   color: #242424 ;
   padding: 0 16px;
   line-height: 65px;
+  }
+  header nav form{
+    height: 250px;
+    width: 500px;
+  }
+  header nav button{
+    width: 200px;
   }
 }
 /*INDEX*/

@@ -7,7 +7,7 @@ session_start();
     <meta charset="utf-8">
     <title>view notes</title>
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="subjectclass.css">
+    <link rel="stylesheet" href="class.css">
   </head>
   <body>
     <header>
@@ -28,40 +28,50 @@ session_start();
           <section class="panel1">
           <a href="other/class/class1.php">
             <div class="box01">
-              <img src="img/img01.jpg" alt="English" class="image01">
-              <h3>English</h3>
+              <img src="img/red-number-1.jpg" alt="class 1" class="image01">
+              <h3>class 1</h3>
             </div>
           </a>
           <a href="other/class/class2.php">
             <div class="box01">
-              <img src="img/img07.png" alt="Kiswahili" class="image01">
-                <h3>Kiswahili</h3>
+              <img src="img/red-number-2.jpg" alt="class 2" class="image01">
+                <h3>class 2</h3>
             </div>
           </a>
           <a href="other/class/class3.php">
             <div class="box01">
-              <img src="img/img03.jpg" alt="Maths" class="image01">
-              <h3>Maths</h3>
+              <img src="img/red-number-3.jpg" alt="class 3" class="image01">
+              <h3>class 3</h3>
             </div>
           </a>
           <a href="other/class/class4.php">
             <div class="box01">
-              <img src="img/img04.png" alt="Science" class="image01">
-              <h3>Science</h3>
+              <img src="img/red-number-4.jpg" alt="class 4" class="image01">
+                <h3>class 4</h3>
             </div>
-          </a>
-          <a href="other/class/class5.php">
-            <div class="box01">
-              <img src="img/img05.jpg" alt="Social Studies" class="image01">
-              <h3>Social Studies</h3>
-            </div>
-          </a>
-          <a href="other/class/class6.php">
-            <div class="box01">
-              <img src="img/img06.jpg" alt="C.R.E" class="image01">
-              <h3>C.R.E</h3>
-            </div>
-          </a>
+          </a>  <a href="other/class/class5.php">
+              <div class="box01">
+                <img src="img/red-number-5.jpg" alt="class 5" class="image01">
+                <h3>class 5</h3>
+              </div>
+            </a>
+            <a href="other/class/class6.php">
+              <div class="box01">
+                <img src="img/red-number-6.jpg" alt="class 6" class="image01">
+                  <h3>class 6</h3>
+              </div>
+            </a>  <a href="other/class/class7.php">
+                <div class="box01">
+                  <img src="img/red-number-7.jpg" alt="class 7" class="image01">
+                  <h3>class 7</h3>
+                </div>
+              </a>
+              <a href="other/class/class8.php">
+                <div class="box01">
+                  <img src="img/red-number-8.jpg" alt="class 8" class="image01">
+                    <h3>class 8</h3>
+                </div>
+              </a>
           </section>
         </div>
       </section>
