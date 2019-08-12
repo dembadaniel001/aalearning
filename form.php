@@ -1,3 +1,6 @@
+<?php
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -58,7 +61,7 @@
         <a href="profile.php"><li></li>User profile</a>
       </ul>
       <div class="contactSM">
-        <a href="#">
+        <a href="https://web.facebook.com/Demba-Jr-Techdev-619066981920240/">
           <img src="img/img08.png" alt="facebook icon">
         </a>
         <a href="#">

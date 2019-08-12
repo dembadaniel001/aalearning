@@ -1,74 +1,65 @@
+<?php
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>view notes</title>
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="class.css">
+    <link rel="stylesheet" href="subjectclass.css">
   </head>
   <body>
     <header>
-     <a href="index.php" class="header-logo">aaLearning</a>
+     <a href="http://localhost/aalearning/index.php" class="header-logo">aaLearning</a>
      <nav>
        <ul>
-        <a href="index.php"><li>Home</li></a>
-        <a href="profile.php"><li>User profile</li></a>
+        <a href="http://localhost/aalearning/index.php"><li>Home</li></a>
+        <a href="http://localhost/aalearning/profile.php"><li>User profile</li></a>
        </ul>
      </nav>
     </header>
     <main>
       <section class="panel">
         <div class="container1">
-          <h1>Choose level of education</h1>
+          <h1>Choose a subject</h1>
           </div>
           <div class="container2">
           <section class="panel1">
           <a href="other/class/class1.php">
             <div class="box01">
-              <img src="img/red-number-1.jpg" alt="Class 1" class="image01">
-              <h3>Class 1</h3>
+              <img src="img/img01.jpg" alt="English" class="image01">
+              <h3>English</h3>
             </div>
           </a>
           <a href="other/class/class2.php">
             <div class="box01">
-              <img src="img/red-number-2.jpg" alt="Class 2" class="image01">
-                <h3>Class 2</h3>
+              <img src="img/img07.png" alt="Kiswahili" class="image01">
+                <h3>Kiswahili</h3>
             </div>
           </a>
           <a href="other/class/class3.php">
             <div class="box01">
-              <img src="img/red-number-3.jpg" alt="Class 3" class="image01">
-              <h3>Class 3</h3>
+              <img src="img/img03.jpg" alt="Maths" class="image01">
+              <h3>Maths</h3>
             </div>
           </a>
           <a href="other/class/class4.php">
             <div class="box01">
-              <img src="img/red-number-4.jpg" alt="Class 4" class="image01">
-              <h3>Class 4</h3>
+              <img src="img/img04.png" alt="Science" class="image01">
+              <h3>Science</h3>
             </div>
           </a>
           <a href="other/class/class5.php">
             <div class="box01">
-              <img src="img/red-number-5.jpg" alt="Class 5" class="image01">
-              <h3>Class 5</h3>
+              <img src="img/img05.jpg" alt="Social Studies" class="image01">
+              <h3>Social Studies</h3>
             </div>
           </a>
           <a href="other/class/class6.php">
             <div class="box01">
-              <img src="img/red-number-6.jpg" alt="Class 6" class="image01">
-              <h3>Class 6</h3>
-            </div>
-          </a>
-          <a href="other/class/class7.php">
-            <div class="box01">
-              <img src="img/red-number-7.jpg" alt="Class 7" class="image01">
-              <h3>Class 7</h3>
-            </div>
-          </a>
-          <a href="other/class/class8.php">
-            <div class="box01">
-              <img src="img/red-number-8.jpg" alt="Class 8" class="image01">
-              <h3>Class 8</h3>
+              <img src="img/img06.jpg" alt="C.R.E" class="image01">
+              <h3>C.R.E</h3>
             </div>
           </a>
           </section>
@@ -77,9 +68,9 @@
     </main>
     <footer>
       <ul>
-        <a href="index.php"><li></li>Home</a>
-        <a href="student.php"><li></li>View notes</a>
-        <a href="profile.php"><li></li>User profile</a>
+        <a href="http://localhost/aalearning/index.php"><li></li>Home</a>
+        <a href="http://localhost/aalearning/student.php"><li></li>View notes</a>
+        <a href="http://localhost/aalearning/profile.php"><li></li>User profile</a>
       </ul>
       <div class="contactSM">
         <a href="#">
