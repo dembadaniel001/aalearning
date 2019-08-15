@@ -31,16 +31,18 @@
               $username = mysqli_real_escape_string($conn, $_POST['username']);
               $email = mysqli_real_escape_string($conn, $_POST['email']);
               $phone = mysqli_real_escape_string($conn, $_POST['phone']);
+              $level_education_id = mysqli_real_escape_string($conn, $_POST['level_education_id']);
               $school = mysqli_real_escape_string($conn, $_POST['school']);
               $city = mysqli_real_escape_string($conn, $_POST['city']);
               $DOB = mysqli_real_escape_string($conn, $_POST['DOB']);
+              $gender = mysqli_real_escape_string($conn, $_POST['gender']);
               $password = mysqli_real_escape_string($conn, $_POST['password']);
               $password1 = mysqli_real_escape_string($conn, $_POST['password1']);
 
               if ($password == $password1) {
                 //create user
                 $hashedpassword = password_hash($password, PASSWORD_DEFAULT); //encrypt password for security
-                $sql = "INSERT INTO students(fname, lname, username, email, phone, school, city, DOB, password) VALUES('$fname', '$lname', '$username', '$email', '$phone', '$school', '$city', '$DOB', '$hashedpassword')";
+                $sql = "INSERT INTO students(fname, lname, username, email, phone, level_education_id, school, city, DOB, gender, password) VALUES('$fname', '$lname', '$username', '$email', '$phone', '$level_education_id', '$school', '$city', '$DOB', '$gender', '$hashedpassword')";
                 mysqli_query($conn, $sql);
                 $_SESSION['message'] = "You have been succesfully registered";
                 $_SESSION['username'] = $username;
@@ -74,6 +76,13 @@
                 <input type="text" name="phone" placeholder="phone number">
               </tr>
               <tr>
+                <select class="select" name="level_education_id">
+                  <option>Select Level of Education</option>
+                  <option value="1">Primary School</option>
+                  <option value="2">Secondary School</option>
+                </select>
+              </tr>
+              <tr>
                 <input type="text" name="school" placeholder="school">
               </tr>
               <tr>
@@ -81,6 +90,10 @@
               </tr>
               <tr>
                 <input type="date" name="DOB" placeholder="date of birth">
+              </tr>
+              <tr class="radio">
+                <input type="radio" name="gender" value="M" /><h1>Male</h1>
+                <input type="radio" name="gender" value="F" /><h1>Female</h1>
               </tr>
               <tr>
                 <input type="password" name="password" placeholder="password">

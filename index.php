@@ -37,23 +37,33 @@ session_start();
         </div>
       </section>
       <div class="container1">
-      <section class="about2">
-        <div class="box02">
-          <h3>books</h3>
-        </div>
-        <div class="box03">
-          <h3>teachers</h3>
-        </div>
-        <div class="box02">
-          <h3>notes</h3>
-        </div>
-        <div class="box03">
-          <h3>tutorial videos</h3>
-        </div>
-        <div class="box03">
-          <h3>online classes</h3>
-        </div>
-      </section>
+        <?php
+        if (isset($_SESSION['u_id'])) {
+          echo '
+          
+          ';
+        }else {
+          echo '
+          <section class="about2">
+            <div class="box02">
+              <h3>books</h3>
+            </div>
+            <div class="box03">
+              <h3>teachers</h3>
+            </div>
+            <div class="box02">
+              <h3>notes</h3>
+            </div>
+            <div class="box03">
+              <h3>tutorial videos</h3>
+            </div>
+            <div class="box03">
+              <h3>online classes</h3>
+            </div>
+          </section>
+          ';
+        }
+         ?>
     </div>
     </main>
     <footer>

@@ -243,10 +243,31 @@ padding: 0 16px;
     font-size: 20px;
     float: left;
   }
+  .login form .select{
+    width: 350px;
+    height: 25px;
+    margin: 20px 60px;
+    padding: 20px 50px;
+    font-size: 20px;
+    float: left;
+    margin: 50px auto;
+    border: none;
+    background-color: #ccc;
+    font-family: arial;
+    font-size: 60px;
+    color: #111;
+    line-height: 100px;
+    display: block;
+  }
   .login form button{
     width: 150px;
     height: 40px;
     font-size: 30px;
+  }
+  .radio{
+    float: left;
+    margin: 0;
+    padding: 0;
   }
   .login form a{
     width: 150px;
