@@ -26,37 +26,37 @@ session_start();
           </div>
           <div class="container2">
           <section class="panel1">
-          <a href="other/class/class1.php">
+          <a href="class5English.php">
             <div class="box01">
               <img src="img/img01.jpg" alt="English" class="image01">
               <h3>English</h3>
             </div>
           </a>
-          <a href="other/class/class2.php">
+          <a href="class5Kiswahili.php">
             <div class="box01">
               <img src="img/img07.png" alt="Kiswahili" class="image01">
                 <h3>Kiswahili</h3>
             </div>
           </a>
-          <a href="other/class/class3.php">
+          <a href="class5Maths.php">
             <div class="box01">
               <img src="img/img03.jpg" alt="Maths" class="image01">
               <h3>Maths</h3>
             </div>
           </a>
-          <a href="other/class/class4.php">
+          <a href="class5Science.php">
             <div class="box01">
               <img src="img/img04.png" alt="Science" class="image01">
               <h3>Science</h3>
             </div>
           </a>
-          <a href="other/class/class5.php">
+          <a href="class5SStudies.php">
             <div class="box01">
               <img src="img/img05.jpg" alt="Social Studies" class="image01">
               <h3>Social Studies</h3>
             </div>
           </a>
-          <a href="other/class/class6.php">
+          <a href="class5CRE.php">
             <div class="box01">
               <img src="img/img06.jpg" alt="C.R.E" class="image01">
               <h3>C.R.E</h3>

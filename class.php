@@ -22,7 +22,7 @@ session_start();
     <main>
       <section class="panel">
         <div class="container1">
-          <h1>Choose a subject</h1>
+          <h1>Choose a class</h1>
           </div>
           <div class="container2">
           <section class="panel1">

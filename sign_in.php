@@ -12,6 +12,7 @@
      <nav>
        <ul>
         <a href="index.php"><li>Home</li></a>
+        <a href="login.php"><li>Log in</li></a>
        </ul>
      </nav>
     </header>
@@ -46,13 +47,11 @@
                 mysqli_query($conn, $sql);
                 $_SESSION['message'] = "You have been succesfully registered";
                 $_SESSION['username'] = $username;
-                echo "you have been succesfullyregistered you can now login into the program";
+                header("location: sign_in.php?signup=success");
                 exit();
-                //header("location: index.php");
                 }else {
                 //failed
-                $_SESSION['message'] = "The two passwords do not match";
-                echo "The two passwords do not match";
+                header("location: sign_in.php?error=passwordnotmatch");
                 exit();
               }
             }
@@ -60,6 +59,18 @@
             ?>
             <table>
               <h2>Sign up here</h2>
+              <?php
+              if (isset($_GET['error'])) {
+                if ($_GET['error'] == "passwordnotmatch") {
+                  // code...
+                  echo '<h1>Passwords do not match!</h1>';
+                }
+              }elseif (isset($_GET['signup'])) {
+                if ($_GET['signup'] == "success") {
+                  echo '<h3>You have been successfully registered you can now login!</h3>';
+                }
+              }
+              ?>
               <tr>
                 <input type="text" name="fname" placeholder="first name">
               </tr>
@@ -70,14 +81,14 @@
                 <input type="text" name="username" placeholder="username">
               </tr>
               <tr>
-                <input type="text" name="email" placeholder="email">
+                <input type="email" name="email" placeholder="email">
               </tr>
               <tr>
                 <input type="text" name="phone" placeholder="phone number">
               </tr>
               <tr>
                 <select class="select" name="level_education_id">
-                  <option>Select Level of Education</option>
+                  <option>Level of Education</option>
                   <option value="1">Primary School</option>
                   <option value="2">Secondary School</option>
                 </select>
@@ -89,11 +100,14 @@
                 <input type="text" name="city" placeholder="city">
               </tr>
               <tr>
-                <input type="date" name="DOB" placeholder="date of birth">
+              <input type="date" name="DOB" placeholder="date of birth">
               </tr>
-              <tr class="radio">
-                <input type="radio" name="gender" value="M" /><h1>Male</h1>
-                <input type="radio" name="gender" value="F" /><h1>Female</h1>
+              <tr>
+              <select class="select" name="gender">
+                <option>Gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
               </tr>
               <tr>
                 <input type="password" name="password" placeholder="password">
@@ -112,7 +126,8 @@
       </div>
       <footer>
       <ul>
-        <a href="#"><li></li>Home</a>
+        <a href="index.php"><li></li>Home</a>
+        <a href="login.php"><li></li>Log in</a>
       </ul>
       <div class="contactSM">
         <a href="https://web.facebook.com/Demba-Jr-Techdev-619066981920240/">

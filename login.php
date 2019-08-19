@@ -12,6 +12,7 @@
      <nav>
        <ul>
         <a href="index.php"><li>Home</li></a>
+        <a href="sign_in.php"><li>Register</li></a>
        </ul>
      </nav>
     </header>
@@ -37,14 +38,14 @@
                 $result = mysqli_query($conn, $sql);
                 $resultCheck = mysqli_num_rows($result);
                 if ($resultCheck < 1) {
-                  echo "usernname does not exist";
+                  header("Location: login.php?error=wronguser");
+                  exit();
                 }else {
                   if ($row = mysqli_fetch_assoc($result)) {
                     // Dehashing the password
                     $hashedpasswordCheck = password_verify($password, $row['password']);
                     if ($hashedpasswordCheck == false) {
-                      echo "password incorrect";
-                      header("Location: login.php");
+                      header("Location: login.php?error=wrongpass");
                       exit();
                     }elseif ($hashedpasswordCheck == true) {
                         // Login the user
@@ -66,6 +67,18 @@
             ?>
             <table>
               <h2>Login here</h2>
+              <?php
+              if (isset($_GET['error'])) {
+                if ($_GET['error'] == "wronguser") {
+                  // code...
+                  echo '<h1>Username do not exist!</h1>';
+                }
+              }elseif (isset($_GET['error'])) {
+                if ($_GET['error'] == "wrongpass") {
+                  echo '<h1>You have entered a wrong password!</h1>';
+                }
+              }
+              ?>
               <tr>
                 <input type="text" name="username" placeholder="username">
               </tr>
@@ -84,6 +97,7 @@
       <footer>
       <ul>
         <a href="#"><li></li>Home</a>
+        <a href="sign_in.php"><li></li>Register</a>
       </ul>
       <div class="contactSM">
         <a href="https://web.facebook.com/Demba-Jr-Techdev-619066981920240/">

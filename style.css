@@ -239,6 +239,26 @@ padding: 0 16px;
   .about2 div h3{
     line-height: 230px;
   }
+  .upload form{
+    width: calc(100% - 40px);
+    height: 600px;
+    display: block;
+    margin: 5px auto;
+    padding-top: 10px;
+  }
+  .upload form tr{
+    display: block;
+    margin: auto;
+  }
+  .upload h2{
+    display: block;
+    text-align: center;
+    font-family: arial;
+    font-size: 25px;
+    color: green;
+    line height: 30px;
+  }
+
 }
 /*FOOTER*/
 footer{

@@ -181,6 +181,19 @@ padding: 0 16px;
   margin: 50px auto;
   text-decoration: underline;
 }
+.login form .select{
+  width: 600px;
+  height: 100px;
+  padding: 20px;
+  margin: 50px auto;
+  border: none;
+  background-color: #ccc;
+  font-family: arial;
+  font-size: 60px;
+  color: #111;
+  line-height: 100px;
+  display: block;
+}
 .login form a:hover{
   color: #5e0618;
 }
@@ -193,6 +206,21 @@ padding: 0 16px;
   color: #111;
   line height: 30px;
   cursor: pointer;
+}
+.login form h1{
+  display: block;
+  text-align: center;
+  font-family: arial;
+  font-size: 25px;
+  color: red;
+  line height: 30px;
+}.login form h3{
+  display: block;
+  text-align: center;
+  font-family: arial;
+  font-size: 25px;
+  color: green;
+  line height: 30px;
 }
 @media only screen and (min-width: 1000px) {
   header .header-logo{
@@ -221,7 +249,7 @@ padding: 0 16px;
   }
   .container01{
     width: 1000px;
-    height: 680px;
+    height: 800px;
     margin: 5px auto;
   }
   .login{
@@ -230,7 +258,7 @@ padding: 0 16px;
   }
   .login form{
     width: calc(100% - 40px);
-    height: 500px;
+    height: 600px;
     display: block;
     margin: 5px auto;
     padding-top: 10px;
@@ -243,21 +271,22 @@ padding: 0 16px;
     font-size: 20px;
     float: left;
   }
+  .login form p{
+    font-size: 25px;
+    font-family: Catamaran;
+    color: #242424 ;
+    padding: 0 16px;
+    line-height: 65px;
+    float: left;
+  }
   .login form .select{
     width: 350px;
     height: 25px;
     margin: 20px 60px;
     padding: 20px 50px;
     font-size: 20px;
+    color: black;
     float: left;
-    margin: 50px auto;
-    border: none;
-    background-color: #ccc;
-    font-family: arial;
-    font-size: 60px;
-    color: #111;
-    line-height: 100px;
-    display: block;
   }
   .login form button{
     width: 150px;
@@ -266,8 +295,6 @@ padding: 0 16px;
   }
   .radio{
     float: left;
-    margin: 0;
-    padding: 0;
   }
   .login form a{
     width: 150px;
@@ -278,6 +305,24 @@ padding: 0 16px;
   }
   .login form h2{
     font-size: 25px;
+  }
+  .login table h1{
+    display: block;
+    text-align: center;
+    font-family: arial;
+    font-size: 25px;
+    color: red;
+    line height: 30px;
+    cursor: pointer;
+  }
+  .login table h3{
+    display: block;
+    text-align: center;
+    font-family: arial;
+    font-size: 25px;
+    color: green;
+    line height: 30px;
+    cursor: pointer;
   }
 }
 /*FOOTER*/
