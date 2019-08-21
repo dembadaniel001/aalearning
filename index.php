@@ -36,12 +36,6 @@ session_start();
      </nav>
     </header>
     <main>
-      <section class="about">
-        <div class="box01">
-          <h1>ABOUT AALEARNING</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Magna etiam tempor orci eu lobortis. Vel quam elementum pulvinar etiam non. Pellentesque massa placerat duis ultricies lacus sed turpis. Ut tortor pretium viverra suspendisse potenti nullam ac. </h2>
-        </div>
-      </section>
       <div class="container1">
         <?php
         include_once 'other/db.php';
@@ -52,16 +46,39 @@ session_start();
           $class_id = $_POST['class_id'];
           $subject_id = $_POST['subject_id'];
           $filename = $_POST['filename'];
+          $file = $_FILES['file'];
 
-          $image=addslashes($_FILES['image']['tmp_name']);
-          $imagename=addslashes($_FILES['image']['name']);
-          $image=file_get_contents($image);
-          $image=base64_encode($image);
+          $fileName = $_FILES['file']['name'];
+          $fileTmpName = $_FILES['file']['tmp_name'];
+          $fileSize = $_FILES['file']['size'];
+          $fileError = $_FILES['file']['error'];
+          $fileType = $_FILES['file']['type'];
 
-          $sql= "INSERT INTO learning_materials(level_education_id, class_id, subject_id, filename, image) VALUES ('$level_education_id', '$class_id', '$subject_id', '$filename', '$image')";
-          mysqli_query($conn, $sql);
-          header("location: index.php?upload=success");
-          exit();
+          $fileExt = explode('.', $fileName);
+          $fileActualExt = strtolower(end($fileExt));
+
+          $allowed = array('jpg', 'jpeg', 'png', 'pdf', 'mp4', 'pptx', 'vid');
+
+          if (in_array($fileActualExt, $allowed)) {
+            if ($fileError === 0) {
+              if ($fileSize < 500000000) {
+                $fileNewName = uniqid('', true);
+                $fileNameNew = uniqid('', true).".".$fileActualExt;
+                $fileDestinalion = 'images/'.$fileNameNew;
+                move_uploaded_file($fileTmpName, $fileDestinalion);
+                $sql= "INSERT INTO learning_materials(level_education_id, class_id, subject_id, filename ,fileTmpName, fileActualExt) VALUES ('$level_education_id', '$class_id', '$subject_id', '$filename', '$fileNewName', '$fileActualExt')";
+                mysqli_query($conn, $sql);
+                header("location: index.php?upload=success");
+                exit();
+              }else {
+                echo "Your file is too large!";
+              }
+            }else {
+            echo "There was an error uploading your file!";
+            }
+          }else {
+            echo "You cannot upload files of this type!";
+          }
              }
          ?>
          <?php
@@ -134,7 +151,7 @@ session_start();
                 <br/><br/>
               </tr>
               <tr>
-                 <input type="file" name="image" id="image"><br/><br/>
+                 <input type="file" name="file" id="file"><br/><br/>
               </tr>
               <input type="text" name="filename" id="filename" placeholder="File description"><br/><br/>
               <input type="submit" name="upload" value="upload" id="upload">
@@ -143,6 +160,12 @@ session_start();
           ';
         }else {
           echo '
+          <section class="about">
+            <div class="box01">
+              <h1>ABOUT AALEARNING</h1>
+              <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Magna etiam tempor orci eu lobortis. Vel quam elementum pulvinar etiam non. Pellentesque massa placerat duis ultricies lacus sed turpis. Ut tortor pretium viverra suspendisse potenti nullam ac. </h2>
+            </div>
+          </section>
           <section class="about2">
             <div class="box02">
               <h3>books</h3>

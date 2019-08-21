@@ -16,7 +16,8 @@ session_start();
 
     while ($row = mysqli_fetch_array($result)) {
       echo "<h2>".$row['filename']."</h2>";
-      echo "<img src='".$row['image']."'";
+      echo "<img src='".$row['fileTmpName'].".".$row['fileTmpName']."'";
+      echo '<br/><br/>';
     }
     ?>
   </body>

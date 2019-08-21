@@ -187,10 +187,8 @@ padding: 0 16px;
   padding: 20px;
   margin: 50px auto;
   border: none;
-  background-color: #ccc;
   font-family: arial;
   font-size: 60px;
-  color: #111;
   line-height: 100px;
   display: block;
 }
@@ -285,7 +283,6 @@ padding: 0 16px;
     margin: 20px 60px;
     padding: 20px 50px;
     font-size: 20px;
-    color: black;
     float: left;
   }
   .login form button{

@@ -45,7 +45,6 @@
                 $hashedpassword = password_hash($password, PASSWORD_DEFAULT); //encrypt password for security
                 $sql = "INSERT INTO students(fname, lname, username, email, phone, level_education_id, school, city, DOB, gender, password) VALUES('$fname', '$lname', '$username', '$email', '$phone', '$level_education_id', '$school', '$city', '$DOB', '$gender', '$hashedpassword')";
                 mysqli_query($conn, $sql);
-                $_SESSION['message'] = "You have been succesfully registered";
                 $_SESSION['username'] = $username;
                 header("location: sign_in.php?signup=success");
                 exit();
@@ -100,7 +99,7 @@
                 <input type="text" name="city" placeholder="city">
               </tr>
               <tr>
-              <input type="date" name="DOB" placeholder="date of birth">
+              <input type="Date" name="DOB" placeholder="date of birth">
               </tr>
               <tr>
               <select class="select" name="gender">
